@@ -8,12 +8,10 @@ platforms:
     enabled: true
     mode: search
     search_limit: 50
-
   xiaohongshu:
     enabled: true
     mode: search
     search_limit: 50
-
   douyin:
     enabled: true
     mode: search
@@ -22,3 +20,12 @@ platforms:
 push:
   feishu:
     enable: true
+
+ai:
+  enabled: true
+  provider: openai-compatible
+  api_key: ${{ secrets.AI_API_KEY }}
+  api_base: "https://api.deepseek.com"
+  model: "deepseek-chat"
+  temperature: 0.3
+  analysis_prompt_file: "config/ai_analysis_prompt.txt"
